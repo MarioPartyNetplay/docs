@@ -1,0 +1,148 @@
+---
+title: "Project64-MPN Troubleshooting"
+description: "Common issues and solutions for Project64-MPN netplay"
+---
+
+# Project64-MPN Troubleshooting
+
+This guide covers common issues you might encounter while setting up or playing Mario Party 1-3 netplay with Project64-MPN.
+
+## Frequently Asked Questions
+
+### Q: I already have PJ64, do I need to download it again?
+
+**A**: Yes. This guide provides a version of the emulator geared specifically for netplay, and it's incompatible with other versions.
+
+### Q: How can I reduce netplay lag?
+
+**Solutions**:
+- Increase lag using `/lag x` command
+- Close any other programs using internet (web browsers, Skype, etc.)
+- Make sure no one on the same network is using the internet (family, roommates)
+- Seek out other users with nearby region tags
+- Ensure it's actually netplay lag by having each player test FPS locally
+
+**About Lag/Buffer**:
+- Lag/Buffer refers to the amount of frames of input delay
+- The larger it is, the more smoothly the game will run (provided all players can run the game fine offline)
+- You can set it mid-game using `/lag x`
+- Always set it to the lowest value that gives you a smooth framerate to reduce unnecessary input delay
+
+### Q: The game's graphics are bad! Can I make them look better?
+
+**A**: The resolution and anti-aliasing of a game can be changed without issue, though it's not recommended as the emulation will require more resources. If you want to edit these options, load a splitscreen Mini-Game such as MP2's Shell Shocked offline and confirm the game speed does not decrease.
+
+### Q: What Video Plugin should I use?
+
+**A**:
+- **GLideN64** for Windows
+- **Jabo's** if you have trouble with GLideN64
+- **Rice** for macOS
+
+## Connection Issues
+
+### Can't connect to traversal server
+
+**Problem**: Unable to connect to play64.com servers.
+
+**Solutions**:
+- Try different server regions (new-york.play64.com, etc.)
+- Use P2P connection instead
+- Check your firewall settings
+- Ensure your internet connection is stable
+
+### P2P connection issues
+
+**Problem**: Can't connect via P2P or host P2P games.
+
+**Solutions**:
+- Ensure port forwarding is set up correctly (port 27886)
+- Check Windows Firewall settings for both TCP and UDP rules
+- Verify your public IP address is correct
+- Make sure your router supports UPnP or manual port forwarding
+
+## Controller Issues
+
+### Xbox controller not working properly
+
+**Problem**: Xbox controller inputs not registering correctly.
+
+**Solution**: 
+- Make sure the **XInput** option is checked in N-Rage Input Plugin V2: 2.3c's configuration
+- Reconfigure your controller settings
+
+### GameCube controller issues
+
+**Problem**: Shoulder button issues or random inputs with GameCube controller.
+
+**Solution**: 
+- Use the **Direct-Input8** input plugin instead of the default
+- This is included as an option specifically for GameCube controller users
+
+### Multiple controllers on same computer
+
+**Problem**: Issues with multiple people playing from the same computer.
+
+**Solutions**:
+- Make sure everyone playing has only the controller they're using plugged in
+- Configure each controller separately in the input plugin
+- Ensure the host allows multiple ports if needed
+
+## Game Issues
+
+### Save file conflicts
+
+**Problem**: Save file mismatch warnings or corrupted saves.
+
+**Solutions**:
+- Every player must have the same save file for saving to work
+- Always say **Y** when prompted unless you are mid-game
+- Select **Replace Save Files** from the emulator's Netplay tab before every party
+- Download fresh save files if corruption occurs
+
+### Desync or crashing
+
+**Problem**: Game desyncs or crashes during netplay.
+
+**Solutions**:
+- Use `/map 1:<controller_port>` to change controller ports
+- Restart the netplay session
+- Ensure all players have the same ROM versions
+- Check that everyone's settings match
+
+### Black screen on game window
+
+**Problem**: Game window shows black screen.
+
+**Solution**: This is normal behavior - use the pop-up netplay window to control the game.
+
+## Performance Issues
+
+### Poor graphics performance
+
+**Problem**: Game runs slowly or graphics are poor.
+
+**Solutions**:
+- Try different video plugins (GLideN64 recommended for Windows)
+- Lower resolution and anti-aliasing settings
+- Close other programs using system resources
+- Test performance offline first
+
+### Input lag
+
+**Problem**: Excessive input delay during gameplay.
+
+**Solutions**:
+- Adjust lag settings using `/lag x` command
+- Disable autolag if needed
+- Check network connection quality
+- Ensure all players have good local performance
+
+## Getting More Help
+
+If you're still having issues:
+
+1. Check our [Discord server](https://discord.gg/U7rUxs2) for community support
+2. Visit our [GitHub repository](https://github.com/MarioPartyNetplay) for updates and bug reports
+3. Make sure you're using the latest version of Project64-MPN
+4. Check the #news channel in Discord for updates about new features

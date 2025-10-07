@@ -1,0 +1,121 @@
+---
+title: "Dolphin-MPN Troubleshooting"
+description: "Common issues and solutions for Dolphin-MPN netplay"
+---
+
+# Dolphin-MPN Troubleshooting
+
+This guide covers common issues you might encounter while setting up or playing Mario Party 4-8 netplay with Dolphin-MPN.
+
+## Connection Issues
+
+### Can't connect to traversal lobby
+
+**Problem**: Dolphin stalls when trying to join someone's traversal lobby.
+
+**Solution**: 
+- You may only be able to connect to lobbies hosted over Direct Connect
+- Either have the player unable to connect host the traversal lobby themselves
+- Or have the host forward a port and host over Direct Connect
+- If you need help forwarding a port, try following [this guide](https://portforward.com/)
+
+### Direct Connect vs Traversal Server
+
+**When to use Direct Connect**:
+- When the traversal server is down
+- For players who have trouble with the traversal server at all times
+- May be the only way to play for some users
+
+## Game Issues
+
+### Black screen during emulation
+
+**Problem**: The game shows up as a black screen when starting netplay.
+
+**Solution**: 
+- The black screen is caused by players not starting emulation at the same time
+- Ensure that no one in the lobby is running the game before the host starts netplay
+
+### Board went black during Mario Party
+
+**Problem**: The board went black while playing Mario Party.
+
+**Solution**: 
+- In-game, quit out of the party and try again
+- If you've been saving every turn, no progress will be lost
+
+### Frame 0 desync
+
+**Problem**: Someone desynced on frame 0.
+
+**Solution**: 
+- A frame 0 desync means there's a checksum mismatch
+- All players should have the same game version
+- Verify your game files match the required checksums
+
+## Performance Issues
+
+### Reducing netplay lag
+
+**Solutions**:
+- Increase buffer settings
+- Close any other programs using internet (web browsers, Skype, etc.)
+- Make sure no one on the same network is using the internet (family, roommates)
+- Seek out players from nearby regions
+- Ensure it's actually netplay lag by having each player test FPS locally
+
+**About Buffer/Lag**:
+- Buffer refers to the amount of frames of input delay
+- The larger it is, the more smoothly the game will run (provided all players can run the game fine offline)
+- You can set it mid-game
+- Always set it to the lowest value that gives you a smooth framerate to reduce unnecessary input delay
+
+### Graphics performance
+
+**Problem**: The game's graphics are bad or performance is poor.
+
+**Solution**:
+- The resolution and anti-aliasing can be changed without issue
+- However, it's not recommended as emulation will require more resources
+- If you want to edit these options, load a splitscreen Mini-Game such as MP6's Circuit Maximus offline and confirm the game speed does not decrease
+
+## Save File Issues
+
+### Corrupted save files
+
+**Problem**: Save file is corrupted.
+
+**Solution**:
+- Try formatting the data
+- Or redownload the saves from the Dolphin-MPN package
+
+## Frequently Asked Questions
+
+### Q: I already have Dolphin, do I need to download it again?
+
+**A**: Ideally yes, this guide provides a version of the emulator geared specifically for netplay, but as long as the host is using our build, any modern Dolphin build should be able to connect.
+
+### Q: How do I use the GameCube Mic accessory over netplay?
+
+**A**: Mic compatibility is currently not possible over netplay.
+
+### Q: How do I play Mario Party 7's Deluxe Cruise mode over netplay?
+
+**A**: 8-player netplay is currently not possible over netplay.
+
+### Q: Multiple people on same computer?
+
+**A**: It's possible for multiple people to play from the same computer as long as the controllers they're using are plugged in and the host allows them use of multiple ports.
+
+### Q: Hosting for 4 other people?
+
+**A**: It's possible to host a room for 4 other people as long as the host disables their controller in Dolphin.
+
+## Getting More Help
+
+If you're still having issues:
+
+1. Check our [Discord server](https://discord.gg/marioparty) for community support
+2. Visit our [GitHub repository](https://github.com/MarioPartyNetplay) for updates and bug reports
+3. Make sure you're using the latest version of the emulator
+4. Verify your game files match the required checksums
